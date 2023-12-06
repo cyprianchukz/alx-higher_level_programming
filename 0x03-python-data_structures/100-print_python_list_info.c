@@ -1,6 +1,11 @@
 #include <stdlib.h>
 #include <stdio.h>
+
+struct timespec;
+
 #include <Python.h>
+#include <time.h>
+
 /**
  * print_python_list_info -  function that prints some basic
  * info about Python lists
