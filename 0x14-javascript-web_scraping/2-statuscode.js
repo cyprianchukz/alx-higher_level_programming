@@ -1,10 +1,12 @@
 #!/usr/bin/node
+// Status Of Get request
 
-const fs = require('fs');
-
-fs.writeFile(process.argv[2], process.argv[3], 'utf-8',
-  function (err) {
-    if (err) {
-      console.log(err);
-    }
-  });
+const request = require('request');
+const url = process.argv[2];
+request.get(url, function (error, response) {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log('code:' + ' ' + response.statusCode);
+  }
+});
